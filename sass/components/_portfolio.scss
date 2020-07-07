@@ -7,6 +7,13 @@
     margin-right: 30px;
     margin-bottom: 30px;
 
+    @include phone {
+      width: 100%;
+      margin-right: 0 !important;
+      flex-direction: column;
+      align-items: center;
+    }
+
     &:nth-child(3n) {
       margin-right: 0;
     }
@@ -21,6 +28,7 @@
 }
 
 .fon {
+  width: 100%;
   position: relative;
   overflow: hidden;
 
@@ -119,8 +127,7 @@
 
 .portfolio-list li:hover,
 .portfolio-list li:focus {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }

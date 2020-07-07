@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -26,7 +27,9 @@ img {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  // max-width: 1170px;
+  // width: 90%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -42,6 +45,21 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include phone {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .section-title {
@@ -50,9 +68,16 @@ img {
   color: $secondaryColor;
 
   font-weight: 700;
-  font-size: 36px;
+  @include fontsize(36px, 36px, 28px, 28px);
+  // font-size: 36px;
   line-height: 1.16;
   text-align: center;
+
+  @include phone {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $secondaryColor;
+  }
 }
 // .section {
 //   padding-top: 94px;

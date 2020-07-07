@@ -6,6 +6,12 @@ footer {
 .adress-list {
   margin-right: 69px;
 
+  @include phone {
+    text-align: center;
+    margin-right: 0 !important;
+    margin-bottom: 60px;
+  }
+
   .logo {
     color: $whiteColor;
 
@@ -15,6 +21,10 @@ footer {
 
     display: inline-block;
     margin-bottom: 10px;
+
+    @include phone {
+      margin-bottom: 20px;
+    }
   }
   .title {
     color: $whiteColor;
@@ -22,6 +32,10 @@ footer {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+
+    @include phone {
+      margin-bottom: 8px;
+    }
   }
   .link {
     color: rgba(255, 255, 255, 0.6);
@@ -34,6 +48,10 @@ footer {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include phone {
+      margin-bottom: 8px;
+    }
 
     &:hover,
     &:focus {
@@ -59,9 +77,19 @@ footer {
 // footer E-mail
 .footer-link {
   margin-left: 94px;
+
+  @include phone {
+    text-align: center;
+    margin: 0;
+  }
 }
 .form-mail {
   display: flex;
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .mail-input {
@@ -85,6 +113,10 @@ footer {
   color: rgba(255, 255, 255, 0.6);
   background: rgba(0, 0, 0, 0);
   outline: none;
+
+  @include phone {
+    margin-bottom: 20px;
+  }
 }
 .button-mail {
   position: relative;
@@ -111,6 +143,10 @@ footer {
   text-decoration: none;
 
   cursor: pointer;
+
+  @include phone {
+    margin: 0 auto;
+  }
 }
 .button-img {
   position: absolute;
@@ -139,17 +175,32 @@ footer {
 }
 .page-footer {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding-top: 48px;
   padding-bottom: 28px;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+
+  @include lgdesktop {
+    flex-wrap: nowrap;
+  }
+
+  @include phone {
+    flex-direction: column;
+    padding: 60px 15px;
+  }
 }
 .footer-link .list {
   display: flex;
   justify-content: space-evenly;
+  max-width: 206px;
+  margin: 0 auto;
+
+  @include phone {
+    margin-bottom: 60px;
+  }
 }
 .icon-footer {
   display: flex;
